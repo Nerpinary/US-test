@@ -37,24 +37,6 @@ export default class FormValidator {
     }
   };
 
-  //Сброс кнопки и ошибки после отправки формы:
-  resetErrors() {
-    const inputList = Array.from(
-      this._formElement.querySelectorAll(this._inputSelector)
-    );
-    const buttonElement = this._formElement.querySelector(
-      this._submitButtonSelector
-    );
-    inputList.forEach((inputElement) => {
-      if (!inputElement.value) {
-        this._hideInputError(inputElement);
-        this._toggleButtonState(inputList, buttonElement);
-      } else {
-        this._checkInputValidity(inputElement);
-      }
-    });
-  }
-
   //Метод, возвращающий невалидный инпут:
   _hasInvalidInput = (inputList) => {
     return inputList.some((inputElement) => {
