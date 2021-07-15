@@ -1,0 +1,10 @@
+.converter {
+    width: 50%;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 650px) {
+    .converter {
+        width: 90%;
+    }
+}

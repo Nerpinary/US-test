@@ -1,0 +1,23 @@
+.form__submit {
+    border: 1px solid gray;
+}
+
+.form__submit:hover {
+    transition: opacity 0.2s;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.form__submit:enabled {
+    outline: none;
+}
+
+.form__submit:active {
+    border: none;
+}
+
+.form__submit:disabled {
+    opacity: 0.2;
+    background-color: grey;
+    cursor: default;
+}

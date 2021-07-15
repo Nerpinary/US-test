@@ -1,0 +1,21 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    box-sizing: border-box;
+    max-width: 1080px;
+    padding: 0 50px;
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+    max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .content {
+        padding: 0 10px
+    }
+}

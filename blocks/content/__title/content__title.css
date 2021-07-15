@@ -1,0 +1,25 @@
+.content__title {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .content__title {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .content__title {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .content__title {
+        font-size: 25px;
+    }
+}
