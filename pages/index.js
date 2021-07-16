@@ -29,17 +29,7 @@ async function getCurrencies() {
     select.oninput = converteValute;
     //Вынесли конвертацию в отдельную функцию
     function converteValute() {
-        if (rates[select.value.substr(0, 3)].Nominal === 10000) {
-            inputValute.value = (parseFloat(inputRub.value) / rates[select.value.substr(0, 3)].Value * 10000).toFixed(2)
-        } else if (rates[select.value.substr(0, 3)].Nominal === 1000) {
-            inputValute.value = (parseFloat(inputRub.value) / rates[select.value.substr(0, 3)].Value * 1000).toFixed(2)
-        } else if (rates[select.value.substr(0, 3)].Nominal === 100) {
-            inputValute.value = (parseFloat(inputRub.value) / rates[select.value.substr(0, 3)].Value * 100).toFixed(2)
-        } else if (rates[select.value.substr(0, 3)].Nominal === 10) {
-            inputValute.value = (parseFloat(inputRub.value) / rates[select.value.substr(0, 3)].Value * 10).toFixed(2)
-        } else {
-            inputValute.value = (parseFloat(inputRub.value) / rates[select.value.substr(0, 3)].Value).toFixed(2)
-        }
+        inputValute.value = (parseFloat(inputRub.value) / rates[select.value.substr(0, 3)].Value * rates[select.value.substr(0, 3)].Nominal).toFixed(2)
     }
 }
 
